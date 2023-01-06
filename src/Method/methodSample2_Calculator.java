@@ -3,7 +3,7 @@ package Method;
 import java.util.Scanner;
 
 // 문제> 두 수를 입력 받아서, 가감승제산 5가지(+, -, *, /, %)를 하여 출력하세요.
- /* 입력: input(), x, y
+ /* 입력: inputX(), x, inputY(), y
  * 덧셈: adder(), 전달인자 변수(x, y), 매개변수(x1, y1), 반환값(sum1)
  * 뺄셈: suber(), 전달인자 변수(x, y), 매개변수(x2, y2), 반환값(sum2)
  * 곱셈: muler(), 전달인자 변수(x, y), 매개변수(x3, y3), 반환값(sum3)
@@ -59,12 +59,30 @@ public class methodSample2_Calculator {
 		int result = x + y;
 		System.out.println("x + y = " + result);
 	}
+	
+	public static double calc(int x, int y, int z) {
+		// 0: +, 1: -, 2: *, 3: /, 4: %
+		double result = 0;
+		switch(z) {
+		case 0: result = (x + y); break;
+		case 1: result = (x - y); break;
+		case 2: result = (x * y); break;
+		case 3: result = (x / y); break;
+		case 4: result = (x % y); break;
+		}
+		return result;
+	}
 
 	public static void main(String[] args) {
 		// 문제> 두 수를 입력 받아서, 가감승제산 5가지를 하여 출력하세요.
 		
+		
 		int x = InputX();
 		int y = InputY();
+		
+		System.out.println("0: +, 1: -, 2: *, 3: /, 4: % \n 중 선택해주세요.");
+		Scanner sc = new Scanner(System.in);
+		
 		
 		add(x, y);
 		sub(x, y);
