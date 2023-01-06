@@ -9,11 +9,11 @@ public class methodSample_Calc {
 		double result = 0;
 		
 		switch(z) {
-		case 0: result = (x + y); break;
-		case 1: result = (x - y); break;
-		case 2: result = (x * y); break;
-		case 3: result = (x / y); break;
-		case 4: result = (x % y); break;
+			case 0: result = (x + y); break;
+			case 1: result = (x - y); break;
+			case 2: result = (x * y); break;
+			case 3: result = (x / y); break;
+			case 4: result = (x % y); break;
 		}
 		return result;
 	}
