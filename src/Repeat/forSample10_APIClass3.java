@@ -26,7 +26,6 @@ public class forSample10_APIClass3 {
 			newJava = (st.nextToken()).replace("자바", "Java");
 			System.out.print(newJava + " ");
 		}
-		
 
 	}
 }
