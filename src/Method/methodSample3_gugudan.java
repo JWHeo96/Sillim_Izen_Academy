@@ -19,7 +19,6 @@ public class methodSample3_gugudan {
 	
 	private static void gugudan(int start, int end) {
 		
-		System.out.println("===========================================================for문===========================================================");
 		for(int i=start; i<=end; i++) {
 			System.out.printf("====%d단====\t", i);
 		} System.out.println();
