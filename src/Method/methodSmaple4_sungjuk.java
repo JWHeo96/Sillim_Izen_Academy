@@ -10,7 +10,6 @@ public class methodSmaple4_sungjuk {
 	private static int eng;
 	private static int mat;
 	
-	
 	public static void sungjukInput() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("국어 성적을 입력해 주세요.");
@@ -19,14 +18,12 @@ public class methodSmaple4_sungjuk {
 		eng = sc.nextInt();
 		System.out.println("수학 성적을 입력해 주세요.");
 		mat = sc.nextInt();
-		
 	}
 	
 	public static void sungjukProcess() {
 		sungjukInput(); // 성적 입력 루틴
 		total = kor + eng + mat;
 		avg = total / 3;
-		
 	}
 	
 	public static void sungjukOutput() {
@@ -41,6 +38,5 @@ public class methodSmaple4_sungjuk {
 		 * - sungjukOutput(); 
 		 */
 		sungjukOutput(); // 성적 출력 루틴 
-		
 	}
 }
