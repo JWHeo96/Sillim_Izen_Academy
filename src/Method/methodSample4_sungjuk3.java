@@ -1,5 +1,7 @@
 package Method;
 
+import java.util.Scanner;
+
 public class methodSample4_sungjuk3 {
 	private static void outputScores() {
 		
@@ -9,8 +11,10 @@ public class methodSample4_sungjuk3 {
 		
 	}
 
-	private static void inputScores() {
-		
+	private static int[] inputScores() {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int score[] = new int[n];
 	}
 
 	public static void main(String[] args) {
