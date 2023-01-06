@@ -9,6 +9,7 @@ public class methodSample4_sungjuk {
 	public static int kor;
 	private static int eng;
 	private static int mat;
+	static String grade; // null
 	
 	public static void sungjukInput() {
 		Scanner sc = new Scanner(System.in);
@@ -18,6 +19,8 @@ public class methodSample4_sungjuk {
 		eng = sc.nextInt();
 		System.out.println("수학 성적을 입력해 주세요.");
 		mat = sc.nextInt();
+		System.out.println("학점을 입력 하세요.");
+		grade = sc.next(); 
 	}
 	
 	public static void sungjukProcess() {
@@ -28,7 +31,7 @@ public class methodSample4_sungjuk {
 	
 	public static void sungjukOutput() {
 		sungjukProcess(); // 성적 처리 루틴
-		System.out.println("합계: " + total + "점\n평균: " + avg );
+		System.out.println("합계: " + total + "점\n평균: " + avg + "\n학점: " + grade );
 	}
 	public static void main(String[] args) {
 		//문제> 3과목의 성적을 입력 받아서 총점, 평균을 구하여 출력하세요.
