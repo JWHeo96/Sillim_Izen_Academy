@@ -17,16 +17,16 @@ public class methodSample_Calc {
 		}
 		return result;
 	}
-	public static String operator(int o) {
-		String op = null;
-		switch(o) {
-			case 0: op = "+"; break;
-			case 1: op = "-"; break;
-			case 2: op = "*"; break;
-			case 3: op = "/"; break;
-			case 4: op = "%"; break;
+	public static String operator(int op) {
+		String operator = null;
+		switch(op) {
+			case 0: operator = "+"; break;
+			case 1: operator = "-"; break;
+			case 2: operator = "*"; break;
+			case 3: operator = "/"; break;
+			case 4: operator = "%"; break;
 		}
-		return op;
+		return operator;
 	}
 
 	public static void main(String[] args) {
