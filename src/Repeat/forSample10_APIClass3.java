@@ -18,7 +18,7 @@ public class forSample10_APIClass3 {
 
 		// 문제> 자바라는 단어를 Java로 변경
 		// "Java는.객체지향.언어.입니다.Java는.풍부한.API를.지원합니다."
-		String oldJava = "자바는.객체지향.언어.입니다.자바는.풍부한.API를.지원합니다.";
+		String oldJava = s;
 		
 		String newJava = null;
 		StringTokenizer st = new StringTokenizer(oldJava, ".");
