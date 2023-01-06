@@ -35,9 +35,10 @@ public class methodSample_Calc {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("첫 번째 값을 입력해주세요.");
 		int x = sc.nextInt();
-		System.out.println("두 번째 값을 입력해주세요.");
+		System.out.println("\n두 번째 값을 입력해주세요.");
 		int y = sc.nextInt();
-		System.out.println("(연산 기호를 선택해주세요)\n0: +\t1: -\t2: *\n3: /\t4: %");
+		System.out.println("\n(연산 기호를 선택해주세요)\n"
+				+ "0: +(덧셈)\t1: -(뺄셈)\t2: *(곱셈)\n3: /(나눗셈)\t4: %(몫)");
 		int z = sc.nextInt();
 		String op = operator(z);
 			
