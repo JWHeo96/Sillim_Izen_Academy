@@ -23,7 +23,7 @@ public class methodSample3_gugudan {
 			System.out.printf("====%d단====\t", i);
 		} System.out.println();
 		for(int i=1;i<=end;i++) {
-			for(int j=2;j<=end;j++) {
+			for(int j=start;j<=end;j++) {
 				System.out.printf("%d * %d = %d\t", j, i, i * j);
 				if(j==end) {
 					System.out.println();
