@@ -2,11 +2,11 @@ package Method;
 
 import java.util.Scanner;
 
-public class methodSmaple4_sungjuk {
+public class methodSample4_sungjuk {
 	// class variable, 자동 초기화, 숫자 정수형=0, 숫자 실수형=0.0, 문자열=null
-	private static double total;
-	private static double avg;
-	private static int kor;
+	public static double total;
+	public static double avg;
+	public static int kor;
 	private static int eng;
 	private static int mat;
 	
@@ -28,7 +28,7 @@ public class methodSmaple4_sungjuk {
 	
 	public static void sungjukOutput() {
 		sungjukProcess(); // 성적 처리 루틴
-		System.out.println("성적의 합계는 " + total + "점 이고, 평균은 " + avg + "입니다.");
+		System.out.println("합계: " + total + "점\n평균: " + avg );
 	}
 	public static void main(String[] args) {
 		//문제> 3과목의 성적을 입력 받아서 총점, 평균을 구하여 출력하세요.
