@@ -1,5 +1,6 @@
 package ArrayExample;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Array1_concept2 {
@@ -13,7 +14,7 @@ public class Array1_concept2 {
 		Random lotto = new Random(); 
 		int lottos[] = new int[6];
 		for(int i=0; i<lottos.length; i++) {
-			lottos[i] = lotto.nextInt(50)+1;
+			lottos[i] = lotto.nextInt(45)+1;
 			for(int j=0; j<i; j++) {
 				if(lottos[i] == lottos[j]) {
 					i--;
@@ -21,6 +22,7 @@ public class Array1_concept2 {
 			}
 			System.out.println((i+1) +"번 숫자:" + lottos[i]);
 		}
+		System.out.println(Arrays.toString(lottos));
 		
 		
 		
