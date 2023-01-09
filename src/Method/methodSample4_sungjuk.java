@@ -3,7 +3,7 @@ package Method;
 import java.util.Scanner;
 
 public class methodSample4_sungjuk {
-	// class variable, 자동 초기화, 숫자 정수형=0, 숫자 실수형=0.0, 문자열=null
+	// class variable = global Variable, 자동 초기화, 숫자 정수형=0, 숫자 실수형=0.0, 문자열=null
 	public static double total;
 	public static double avg;
 	public static int kor;
