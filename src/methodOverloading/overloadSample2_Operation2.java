@@ -15,7 +15,7 @@ public class overloadSample2_Operation2 {
 	}
 	private static void calculator(double x, int y) {
 		double mok = x % y;
-		System.out.println("두 수의 몫: " + mok);
+		System.out.println("두 수의 나눗셈(나머지): " + mok);
 	}
 	private static void calculator(double x, double y) {
 		sw = false;
