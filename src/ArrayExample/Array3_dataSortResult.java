@@ -54,8 +54,7 @@ public class Array3_dataSortResult {
 				System.out.println(i+1 + "번 째 회전 결과는 :" + Arrays.toString(data2));
 			}
 			System.out.println("\n정렬 후(내림차순)\n" + Arrays.toString(data2) + "\n");
-			
-			j++;
+
 			if(sw) {
 				System.out.println("계속하시겠습니까? (y/n)");
 				String str = sc.next();
