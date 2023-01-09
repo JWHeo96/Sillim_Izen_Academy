@@ -35,15 +35,16 @@ public class overloadSample2_Operation2 {
 			int x = sc.nextInt();
 			System.out.println("두번째 값을 입력해주세요");
 			int y = sc.nextInt();
-			System.out.println("수행하고자 하는 연산을 선택해주세요.");
-			System.out.println("1. 덧셈\t2. 뺄셈\t3. 나눗셈(나머지)\t4. 종료");
+			System.out.println("수행하고자 하는 연산을 선택해주세요.\n1. 덧셈\t2. 뺄셈\t3. 나눗셈(나머지)\t4. 종료");
 			int z = sc.nextInt();
+			
 			switch(z) {
-			case 1: calculator(x, y); break;
-			case 2: calculator(x, (double)y); break;
-			case 3: calculator((double)x, y); break;
-			case 4: calculator((double)x, (double)y); break;
+				case 1: calculator(x, y); break;
+				case 2: calculator(x, (double)y); break;
+				case 3: calculator((double)x, y); break;
+				case 4: calculator((double)x, (double)y); break;
 			}
+			System.out.println();
 			
 		}
 	}
