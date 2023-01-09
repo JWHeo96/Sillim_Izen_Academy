@@ -41,12 +41,13 @@ public class Array1_concept2 {
 				System.out.println("\n난수를 계속 생성하겠습니까?(y/n)");
 				String str = sc.next();
 				if(str.equals("y")) {
+					System.out.println();
 					continue;
 				} else {
 					sw=false;
 				}
 			}
-			System.out.println();
+
 		}
 	} // main end
 } // class end
