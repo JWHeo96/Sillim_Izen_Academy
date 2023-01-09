@@ -27,9 +27,6 @@ public class overloadSample2_Operation2 {
 		 * 4. 종료
 		 */
 		Scanner sc = new Scanner(System.in);
-		
-		int x1;
-		int y1;
 		while(sw) {
 			System.out.println("수행하고자 하는 연산을 선택해주세요.\n1. 덧셈\t2. 뺄셈\t3. 나눗셈(나머지)\t4. 종료");
 			int z = sc.nextInt();
