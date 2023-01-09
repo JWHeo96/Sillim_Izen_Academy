@@ -11,11 +11,11 @@ public class overloadSample2_Operation2 {
 		System.out.println("두 수의 합: " + sum);
 	}
 	private static void calculator(int x, double y) {
-		double dif = x - y;
+		int dif = (int)(x - y);
 		System.out.println("두 수의 차: " + dif);
 	}
 	private static void calculator(double x, int y) {
-		double mok = x % y;
+		int mok = (int)(x % y);
 		System.out.println("두 수의 나눗셈(나머지): " + mok);
 	}
 	
