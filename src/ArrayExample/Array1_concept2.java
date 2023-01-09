@@ -33,8 +33,10 @@ public class Array1_concept2 {
 						}
 					}
 				}
-				System.out.println((x+1) + "번: " + Arrays.toString(lottos));
+				Arrays.sort(lottos);
+				System.out.println(Arrays.toString(lottos));
 			}
+
 			
 			if(sw) {
 				System.out.println("\n난수를 계속 생성하겠습니까?(y/n)");
