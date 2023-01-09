@@ -23,6 +23,7 @@ public class Array1_concept {
 	//배열에 사용할 임의의 데이터를 n개 입력하여 그 배열의 데이터의 
 	// 합계와 평균을 구하여 출력해 봅니다.n
 		double sum = 0;
+		int j = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("입력할 데이터의 갯수를 지정해주세요.");
@@ -38,10 +39,9 @@ public class Array1_concept {
 		} 
 		
 		double avg = sum / scores.length;
-		System.out.println("점수의 합계는 " + sum + " 이고,\n"
-				+ "평균은 " + avg + "입니다.");
-		System.out.println();
-		System.out.printf("점수의 합계는 %.2f이고,\n 평균은 %.2f입니다.",sum, avg);
+		System.out.println("합계: " + sum + "\n"
+				+ "평균: " + avg );
+		
 
 	}
 
