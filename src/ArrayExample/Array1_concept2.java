@@ -36,7 +36,6 @@ public class Array1_concept2 {
 				Arrays.sort(lottos);
 				System.out.println(Arrays.toString(lottos));
 			}
-
 			
 			if(sw) {
 				System.out.println("\n난수를 계속 생성하겠습니까?(y/n)");
