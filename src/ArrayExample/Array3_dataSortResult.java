@@ -43,7 +43,7 @@ public class Array3_dataSortResult {
 			}
 			
 			System.out.println("\n정렬 전\n" + Arrays.toString(data2) + "\n");
-			for(i=0; i<data2.length; i++) {
+			for(i=0; i<data2.length-1; i++) {
 				for(j=i+1; j<data2.length; j++) {
 					if(data2[i] < data2[j]) {
 						temp = data2[i];
