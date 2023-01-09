@@ -46,6 +46,7 @@ public class Array1_concept2 {
 					sw=false;
 				}
 			}
+			System.out.println();
 		}
 	} // main end
 } // class end
