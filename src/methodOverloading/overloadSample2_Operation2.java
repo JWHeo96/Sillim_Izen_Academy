@@ -17,10 +17,6 @@ public class overloadSample2_Operation2 {
 		double mok = x % y;
 		System.out.println("두 수의 나눗셈(나머지): " + mok);
 	}
-	private static void calculator(double x, double y) {
-		sw = false;
-	}
-	
 	public static void main(String[] args) {
 		/* 메뉴를 선택하여
 		 * 1. 덧셈
@@ -29,20 +25,22 @@ public class overloadSample2_Operation2 {
 		 * 4. 종료
 		 */
 		Scanner sc = new Scanner(System.in);
-
+		
+		int x1;
+		int y1;
 		while(sw) {
+			System.out.println("수행하고자 하는 연산을 선택해주세요.\n1. 덧셈\t2. 뺄셈\t3. 나눗셈(나머지)\t4. 종료");
+			int z = sc.nextInt();
+			if(z==4) break;
 			System.out.println("첫번째 값을 입력해주세요");
 			int x = sc.nextInt();
 			System.out.println("두번째 값을 입력해주세요");
 			int y = sc.nextInt();
-			System.out.println("수행하고자 하는 연산을 선택해주세요.\n1. 덧셈\t2. 뺄셈\t3. 나눗셈(나머지)\t4. 종료");
-			int z = sc.nextInt();
-			
+
 			switch(z) {
 				case 1: calculator(x, y); break;
 				case 2: calculator(x, (double)y); break;
 				case 3: calculator((double)x, y); break;
-				case 4: calculator((double)x, (double)y); break;
 			}
 			System.out.println();
 			
