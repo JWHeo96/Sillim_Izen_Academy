@@ -38,10 +38,19 @@ public class Array1_concept {
 			sum += scores[i];
 		} 
 		
-		double avg = sum / scores.length;
-		System.out.println("합계: " + sum + "\n"
-				+ "평균: " + avg );
+		System.out.println("찾을 점수 데이터를 입력하세요.");
+		int searchJumsu = sc.nextInt();
+		for(int i=0; i < scores.length; i++) {
+			if(scores[i] == searchJumsu) {
+				System.out.println(scores[i] + "는 index " + i + "번에 저장되어 있습니다.");
+			} else {
+				System.out.println("찾을 수 없습니다.");
+				break;
+			}
+		}
 		
+		double avg = sum / scores.length;
+		System.out.println("합계: " + sum + "\n" + "평균: " + avg );
 
 	}
 
