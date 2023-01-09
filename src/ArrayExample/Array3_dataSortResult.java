@@ -8,6 +8,7 @@ public class Array3_dataSortResult {
 	 * 데이터>
 	 */
 	public static void main(String[] args) {
+		boolean sw = true;
 		
 		// 버블정렬
 		Scanner sc = new Scanner(System.in);
@@ -32,24 +33,36 @@ public class Array3_dataSortResult {
 //		
 		
 		// 그냥 정렬
-		System.out.println("입력받을 데이터의 갯수를 정해주세요.");
-		int n2 = sc.nextInt();
-		int data2[] = new int[n2];
-		for(i=0; i<data2.length; i++) {
-			System.out.printf("%d번 째 데이터 입력: ", i+1);
-			data2[i] = sc.nextInt();
-		}
-		System.out.println("정렬 전\n" + Arrays.toString(data2));
-		for(i=0; i<data2.length; i++) {
-			for(j=i+1; j<data2.length; j++) {
-				if(data2[i] < data2[j]) {
-					temp = data2[i];
-					data2[i] = data2[j];
-					data2[j] = temp;
+		while(sw) {
+			System.out.println("입력받을 데이터의 갯수를 정해주세요.");
+			int n2 = sc.nextInt();
+			int data2[] = new int[n2];
+			for(i=0; i<data2.length; i++) {
+				System.out.printf("%d번 째 데이터 입력: ", i+1);
+				data2[i] = sc.nextInt();
+			}
+			
+			System.out.println("\n정렬 전\n" + Arrays.toString(data2) + "\n");
+			for(i=0; i<data2.length; i++) {
+				for(j=i+1; j<data2.length; j++) {
+					if(data2[i] < data2[j]) {
+						temp = data2[i];
+						data2[i] = data2[j];
+						data2[j] = temp;
+					}
 				}
+				System.out.println(i+1 + "번 째 회전 결과는 :" + Arrays.toString(data2));
+			}
+			System.out.println("\n정렬 후(내림차순)\n" + Arrays.toString(data2) + "\n");
+			
+			j++;
+			if(sw) {
+				System.out.println("계속하시겠습니까? (y/n)");
+				String str = sc.next();
+				if(str.equals("y")) continue;
+				else break;
 			}
 		}
-		System.out.println("정렬 후(내림차순)\n" + Arrays.toString(data2));
 	}
 	
 
