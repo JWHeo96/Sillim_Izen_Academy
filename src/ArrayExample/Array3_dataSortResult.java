@@ -36,7 +36,7 @@ public class Array3_dataSortResult {
 		int n2 = sc.nextInt();
 		int data2[] = new int[n2];
 		for(i=0; i<data2.length; i++) {
-			System.out.println(i+1 + "번 째 데이터 입력");
+			System.out.printf("%d번 째 데이터 입력: ", i+1);
 			data2[i] = sc.nextInt();
 		}
 		System.out.println("정렬 전\n" + Arrays.toString(data2));
@@ -49,7 +49,7 @@ public class Array3_dataSortResult {
 				}
 			}
 		}
-		System.out.println("정렬 후\n" + Arrays.toString(data2));
+		System.out.println("정렬 후(내림차순)\n" + Arrays.toString(data2));
 	}
 	
 
