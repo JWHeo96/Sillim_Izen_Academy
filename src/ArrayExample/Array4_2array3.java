@@ -11,24 +11,22 @@ public class Array4_2array3 {
 		 *  번호, 이름, 과목1, 과목2, ... 과목n, 총점, 평균, 학점, 석차 출력
 		 *  내림차순 출력
 		 */
-		boolean sw = true;
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("학생의 수를 입력해주세요.");
-		int x = sc.nextInt();
-		System.out.println("과목의 수를 입력해주세요.");
-		int y = sc.nextInt();
-		
-		String[] name = new String[x];
-		int[][] score = new int[x][y];
-		int total[] = new int[x];
-		double avg[] = new double[x];
-		String grade[] = new String[x];
-		int rank[] = new int[x];
-		String temp;
-		String subject[] = {"국어", "영어", "수학", "사회", "과학", "도덕"};
-		
-		while(sw) {
+		while(true) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("학생의 수를 입력해주세요.");
+			int x = sc.nextInt();
+			System.out.println("과목의 수를 입력해주세요.");
+			int y = sc.nextInt();
+			
+			String[] name = new String[x];
+			int[][] score = new int[x][y];
+			int total[] = new int[x];
+			double avg[] = new double[x];
+			String grade[] = new String[x];
+			int rank[] = new int[x];
+			String temp = null;
+			String subject[] = {"국어", "영어", "수학", "사회", "과학", "도덕"};
+			
 			for(int i=0; i<name.length; i++) {
 				System.out.println("학생의 이름을 입력해주세요.");
 				name[i] = sc.next();
