@@ -53,7 +53,9 @@ public class Array4_2array3 {
 			}
 			
 			for(int i=0; i<name.length; i++) {
-				System.out.println(name[i] + " 학생의 총점은 " + total[i] +"점이고, 평균은 " + avg[i] + "점이며, 학점은 " + grade[i] + "입니다." );
+				System.out.println((i+1) + ". " + name[i] + 
+						" 학생의 총점은 " + total[i] +"점이고, 평균은 " + 
+						avg[i] + "점이며, 학점은 " + grade[i] + "입니다." );
 			}
 			System.out.println();
 			
