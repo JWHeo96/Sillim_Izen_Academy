@@ -40,7 +40,7 @@ public class Array4_2array3 {
 				if(avg[i]==100.0) {
 					grade[i] ="A";
 				} else if(avg[i]>100.0) {
-					grade[i] ="잘못된 성적 입력입니다.";
+					grade[i] ="잘못된 성적";
 				} else {
 					switch((int)avg[i]/10) {
 					case 9: grade[i] = "A"; break;
@@ -61,18 +61,26 @@ public class Array4_2array3 {
 			
 			for(int i=0; i<name.length-1; i++) {
 				for(int j=i+1;j<name.length;j++) {
-					if(total[i] < total[j]) {
+					for(int k=0; k<name.length; k++) {
+						if(avg[k]>100.0) {
+							avg[k] = 0;
+						}
+					}
+					if(avg[i] < avg[j]) {
 						temp = name[i];
 						name[i] = name[j];
 						name[j] = temp;
 					}
+					
 				}
 			}
 			
+			System.out.println("=================================");
 			for(int i=0; i<name.length; i++) {
 				System.out.println((i+1) + "등 학생: " + name[i]);
 			}
-			System.out.println();
+			System.out.println("=================================\n");
+
 			
 			System.out.println("계속하시겠습니까? (y/n)");
 			String conti = sc.next();
