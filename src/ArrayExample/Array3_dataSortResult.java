@@ -51,12 +51,16 @@ public class Array3_dataSortResult {
 						data[j] = temp;
 					}
 				}
-				System.out.println(i+1 + "번 째 회전 결과는 :" + Arrays.toString(data));
+				System.out.println(i+1 + "번 째 회전 결과는: " + Arrays.toString(data));
 			}
 			System.out.println("\n정렬 후(내림차순)\n" + Arrays.toString(data) + "\n");
+			
+			for(int k: data) {
+				System.out.printf("%d ",k);
+			}
 
 			if(sw) {
-				System.out.println("계속하시겠습니까? (y/n)");
+				System.out.println("\n계속하시겠습니까? (y/n)");
 				String str = sc.next();
 				if(str.equals("y")) continue;
 				else break;
