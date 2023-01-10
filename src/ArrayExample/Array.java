@@ -1,20 +1,20 @@
-package homeworks;
+package ArrayExample;
 
 import java.util.Scanner;
 
 public class Array {
-	static String subject[] = {"±¹¾î", "¿µ¾î", "¼öÇĞ", "»çÈ¸", "°úÇĞ", "µµ´ö"};
+	static String subject[] = {"êµ­ì–´", "ì˜ì–´", "ìˆ˜í•™", "ì‚¬íšŒ", "ê³¼í•™", "ë„ë•"};
 	
 	public static void header(int repeat) {
 		int i =0;
 		for(i=0; i<repeat+6;i++) {
 			System.out.printf("========");
 		}
-		System.out.printf("\n¹øÈ£\tÀÌ¸§\t");
+		System.out.printf("\në²ˆí˜¸\tì´ë¦„\t");
 		for(i=0; i<repeat; i++) {
 			System.out.printf("%s\t",subject[i]);
 		}
-		System.out.printf("ÃÑÁ¡\tÆò±Õ\tÇĞÁ¡\t¼®Â÷\n");
+		System.out.printf("ì´ì \tí‰ê· \tí•™ì \tì„ì°¨\n");
 		for(i=0; i<repeat+6;i++) {
 			System.out.printf("========");
 		}
@@ -22,10 +22,10 @@ public class Array {
 
 	public static void main(String[] args) {
 		/*
-		 * ÇĞ»ı¼ö´Â ÃÖÀú 5¸í,
-		 * °ú¸ñ¼ö´Â ÃÖÀú 3°ú¸ñ,
-		 * ¹øÈ£, ÀÌ¸§, °ú¸ñ1, °ú¸ñ2, ... °ú¸ñn, ÃÑÁ¡, Æò±Õ, ÇĞÁ¡, ¼®Â÷ Ãâ·Â
-		 * ³»¸²Â÷¼ø Ãâ·Â
+		 * í•™ìƒìˆ˜ëŠ” ìµœì € 5ëª…,
+		 * ê³¼ëª©ìˆ˜ëŠ” ìµœì € 3ê³¼ëª©,
+		 * ë²ˆí˜¸, ì´ë¦„, ê³¼ëª©1, ê³¼ëª©2, ... ê³¼ëª©n, ì´ì , í‰ê· , í•™ì , ì„ì°¨ ì¶œë ¥
+		 * ë‚´ë¦¼ì°¨ìˆœ ì¶œë ¥
 		 * 
 		 */
 		Scanner sc= new Scanner(System.in);
@@ -33,13 +33,13 @@ public class Array {
 		int tempScore[]; int tempInt=0; double tempDouble; String tempStr=null;
 		
 		while(true) {
-			// ÇĞ»ı ¹× °ú¸ñ ¼ö ÀÔ·Â
-			System.out.println("ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			// í•™ìƒ ë° ê³¼ëª© ìˆ˜ ì…ë ¥
+			System.out.println("í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			int std = sc.nextInt();
-			System.out.println("°ú¸ñ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("ê³¼ëª© ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			int sub = sc.nextInt();
 			
-			// ÀÔ·Â ¼ö¿¡ µû¸¥ °¢ ¹è¿­ »ı¼º
+			// ì…ë ¥ ìˆ˜ì— ë”°ë¥¸ ê° ë°°ì—´ ìƒì„±
 			int rank[] = new int[std];
 			int score[][] = new int[std][sub];
 			int sum[] = new int[std];
@@ -47,24 +47,24 @@ public class Array {
 			String grade[] = new String[std];
 			String name[] = new String[std];
 			
-			// ÇĞ»ıÀÇ ÀÌ¸§, °ú¸ñº° ¼ºÀû, ÇÕ°è, Æò±Õ, µî±Ş °è»ê
+			// í•™ìƒì˜ ì´ë¦„, ê³¼ëª©ë³„ ì„±ì , í•©ê³„, í‰ê· , ë“±ê¸‰ ê³„ì‚°
 			for(i=0; i<name.length; i++) {
-				//ÇĞ»ı ÀÌ¸§ ÀÔ·Â
-				System.out.println((i+1) + "¹øÂ° ÇĞ»ıÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				//í•™ìƒ ì´ë¦„ ì…ë ¥
+				System.out.println((i+1) + "ë²ˆì§¸ í•™ìƒì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”.");
 				name[i] = sc.next();
-				// ÇĞ»ıÀÇ °ú¸ñº° Á¡¼ö ÀÔ·Â
+				// í•™ìƒì˜ ê³¼ëª©ë³„ ì ìˆ˜ ì…ë ¥
 				for(j=0; j<sub; j++) {
-					System.out.println(name[i] + " ÇĞ»ıÀÇ " + subject[j] + "Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+					System.out.println(name[i] + " í•™ìƒì˜ " + subject[j] + "ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 					score[i][j] = sc.nextInt();
-					// ÀÔ·Â¹ŞÀº °ú¸ñÀÇ ÃÑ ÇÕ°è Á¡¼ö °è»ê
+					// ì…ë ¥ë°›ì€ ê³¼ëª©ì˜ ì´ í•©ê³„ ì ìˆ˜ ê³„ì‚°
 					sum[i] += score[i][j];
 				}
-				// ÇĞ»ıº° Æò±Õ Á¡¼ö °è»ê
+				// í•™ìƒë³„ í‰ê·  ì ìˆ˜ ê³„ì‚°
 				avg[i] = (double)sum[i]/sub;
 				
-				// ÇĞ»ıº° Æò±ÕÁ¡¼ö¿¡ µû¸¥ ÇĞÁ¡ °è»ê
-				// 100Á¡ ÃÊ°ú½Ã¿¡´Â grade¿¡ Àß¸øµÈ ¼ºÀû ÀÔ·Â
-				if(avg[i]>100.0) {grade[i] ="Àß¸øµÈ ¼ºÀû";} 
+				// í•™ìƒë³„ í‰ê· ì ìˆ˜ì— ë”°ë¥¸ í•™ì  ê³„ì‚°
+				// 100ì  ì´ˆê³¼ì‹œì—ëŠ” gradeì— ì˜ëª»ëœ ì„±ì  ì…ë ¥
+				if(avg[i]>100.0) {grade[i] ="-";} 
 				else {
 					switch((int)avg[i]/10) {
 					    case 10: case 9: grade[i] = "A"; break;
@@ -76,21 +76,32 @@ public class Array {
 				}
 			}
 			
-			// ¼®Â÷ ±¸ÇÏ±â
-			// ¾ÕµÚ ¼ıÀÚ ºñ±³ÇÏ¿© Å¬¼ö·Ï 1¾¿ Ä«¿îÆ®
+			// ì„ì°¨ êµ¬í•˜ê¸°
+			// ì•ë’¤ ìˆ«ì ë¹„êµí•˜ì—¬ í´ìˆ˜ë¡ 1ì”© ì¹´ìš´íŠ¸
+			// í‰ê· ì ìˆ˜ 100ì  ì´ˆê³¼ì‹œì—ëŠ” í•©ê³„ì— 0ì„ ì…ë ¥í•˜ì—¬ ìµœì € ìˆœìœ„ ì…ë ¥
 			for(i=0; i<name.length; i++) {
 				rank[i] = 1;
 				for(j=0; j<name.length; j++) {
+					for(int k=0; k<name.length; k++) {
+						if(avg[k]>100.0) {
+							sum[k] = 0;
+						}
+					}
 					if(sum[i] < sum[j]) {
 						rank[i]++;
 					}
 				}
 			}
 			
-			// Á¡¼ö ³ôÀº ¼ø Á¤·Ä
-			// Æò±ÕÁ¡¼ö 100Á¡ ÃÊ°ú½Ã¿¡´Â ÇÕ°è¿Í Æò±Õ°ª¿¡ 0À» ÀÔ·ÂÇÏ¿© ÃÖÇÏÀ§ ¼øÀ§·Î º¯°æ
+			// ì ìˆ˜ ë†’ì€ ìˆœ ì •ë ¬
+			// í‰ê· ì ìˆ˜ 100ì  ì´ˆê³¼ì‹œì—ëŠ” í‰ê· ê°’ì— 0ì„ ì…ë ¥í•˜ì—¬ ìµœí•˜ìœ„ ìˆœìœ„ë¡œ ë³€ê²½
 			for(i=0; i<name.length-1; i++) {
 				for(j=i+1; j<name.length; j++) {
+					for(int k=0; k<name.length; k++) {
+						if(avg[k]>100.0) {
+							avg[k] = 0;
+						}
+					}
 					if(sum[i] > sum[j]) {
 						{
 							tempInt = sum[i];
@@ -127,7 +138,7 @@ public class Array {
 			}
 			
 				
-			// °á°ú Ãâ·Â
+			// ê²°ê³¼ ì¶œë ¥
 			header(sub);
 					System.out.println();
 					for(i=0; i<name.length; i++) {
@@ -138,8 +149,8 @@ public class Array {
 						System.out.printf("%d\t%.2f\t%s\t%d\n", sum[i], avg[i], grade[i], rank[i]);
 					}
 
-				// ÇÁ·Î¼¼½º Á¾·á Áú¹®
-				System.out.println("\n°è¼ÓÇÏ½Ã°Ú½À´Ï±î? (y/n)");
+				// í”„ë¡œì„¸ìŠ¤ ì¢…ë£Œ ì§ˆë¬¸
+				System.out.println("\nê³„ì†í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n)");
 				String conti = sc.next();
 				if(conti.equals("y")) {
 					continue;
