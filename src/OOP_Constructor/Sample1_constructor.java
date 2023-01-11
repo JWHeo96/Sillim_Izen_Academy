@@ -56,10 +56,11 @@ public class Sample1_constructor {
 //		Sample1_constructor scon = new Sample1_constructor(x, y);
 //		adder(); // 덧셈
 		
+		// Number라는 클래스의 Number(int x, int y) 생성자에 x, y값 입력받아 전달
 		Number numb = new Number(x, y);
-		numb.getNumber();
 		
-	
+		// Number변수의 필드 변수 n, m 값을 출력
+		numb.getNumber();
 		
 	}
 
@@ -69,11 +70,13 @@ class Number {
 	static int n=0; 
 	static int m=0; 
 	
+	// 메인 Class에서 입력받은 x, y값을 Number 클래스의 필드변수인 n과 m에 저장
 	public Number(int x, int y) {
 		Number.n = x;
 		Number.m = y;
 	}
 	
+	// Number변수의 필드 변수 n, m 값을 출력
 	public static void getNumber() {
 		System.out.println("getNumber(): " + n);
 		System.out.println("getNumber(): " + m);
