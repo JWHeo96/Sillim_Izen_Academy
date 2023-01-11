@@ -4,11 +4,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Array4_2array3_2 {
+	// 전역 변수 선언
 	static Scanner sc= new Scanner(System.in);
-	static String subject[] = {"국어", "영어", "수학", "사회", "과학", "도덕"};
+	static String subject[] = {"국어", "영어", "수학", "사회", "과학", "한국사"};
 	static int std=0, sub=0;
 	static boolean sw = true;
 	
+	// 출력문
 	public static void header(int repeat) {
 		int i =0;
 		for(i=0; i<repeat+6;i++) {
@@ -56,11 +58,12 @@ public class Array4_2array3_2 {
 		String grade[] = new String[std];
 		String name[] = new String[std];
 
+		// 반복문에 사용될 변수 및, 정렬을 위한 쓰레기변수 선언
 		int i=0; int j=0; 
 		int tempScore[]; int tempInt=0; double tempDouble; String tempStr=null;
 		
 		while(sw) {
-			// 학생의 이름, 과목별 성적, 합계, 평균, 등급 계산
+			// 학생의 이름, 성적 입력
 			while(sw) {
 				try {
 					for(i=0; i<name.length; i++) {
@@ -102,16 +105,16 @@ public class Array4_2array3_2 {
 		
 			
 			// 석차 구하기
-			// 앞뒤 숫자 비교하여 클수록 1씩 카운트
-			// 평균점수 100점 초과시에는 합계에 0을 입력하여 최저 순위 입력
 			for(i=0; i<name.length; i++) {
 				rank[i] = 1;
 				for(j=0; j<name.length; j++) {
+					// 평균점수 100점 초과시에는 합계에 0을 입력하여 최저 순위 입력
 					for(int k=0; k<name.length; k++) {
 						if(avg[k]>100.0) {
 							sum[k] = 0;
 						}
 					}
+					// 앞뒤 숫자 비교하여 클수록 1씩 카운트
 					if(sum[i] < sum[j]) {
 						rank[i]++;
 					}
@@ -119,14 +122,15 @@ public class Array4_2array3_2 {
 			}
 			
 			// 점수 높은 순 정렬
-			// 평균점수 100점 초과시에는 평균값에 0을 입력하여 최하위 순위로 변경
 			for(i=0; i<name.length-1; i++) {
 				for(j=i+1; j<name.length; j++) {
+					// 평균점수 100점 초과시에는 평균값에 0을 입력하여 최하위 순위로 변경
 					for(int k=0; k<name.length; k++) {
 						if(avg[k]>100.0) {
 							avg[k] = 0;
 						}
 					}
+					// 앞, 뒤의 숫자를 비교하여 선언된 모든 배열 정렬
 					if(sum[i] > sum[j]) {
 						{	tempInt = sum[i];
 							sum[i] = sum[j];
