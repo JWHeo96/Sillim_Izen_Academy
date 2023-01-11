@@ -8,7 +8,7 @@ public class Sample1_constructor_overloading2 {
 	
 	// 필드(Field)
 	static Scanner sc = new Scanner(System.in);
-	private static double result; //0 => 300
+	private static int result; //0 => 300
 	private static double add;
 	
 	// 생성자(Constructor)
@@ -16,20 +16,23 @@ public class Sample1_constructor_overloading2 {
 	
 	public Sample1_constructor_overloading2() { //생성자 메소드
 	}
-	public Sample1_constructor_overloading2(int x, int y) { //생성자 메소드
-		this.result = x+y;	// 300
+	public Sample1_constructor_overloading2(float x, int y) { //생성자 메소드
+		this.result = (int)(x+y);	// 300
 	}
 	public Sample1_constructor_overloading2(int x, double y) { //생성자 메소드
-		this.result = x-y;	// 5
+		this.result = (int)(x-y);	// 5
 	}
 	public Sample1_constructor_overloading2(double x, int y) { //생성자 메소드
-		this.result = x*y;	// 5
+		this.result = (int)(x*y);	// 5
 	}
 	public Sample1_constructor_overloading2(double x, double y) { //생성자 메소드
-		this.result = x/y;	// 5
+		this.result = (int)(x/y);	// 5
+	}
+	public Sample1_constructor_overloading2(int x, int y) { //생성자 메소드
+		this.result = (int)(x%y);	// 5
 	}
 	
-	public double getResult() {
+	public int getResult() {
 		return result;
 	}
 	
@@ -55,7 +58,7 @@ public class Sample1_constructor_overloading2 {
 		int y = yInput(); // y => 5
 		
 //		//												 
-		Sample1_constructor_overloading2 scon1 = new Sample1_constructor_overloading2(x, y);
+		Sample1_constructor_overloading2 scon1 = new Sample1_constructor_overloading2((float)x, y);
 		System.out.println("x+y: " + scon1.getResult());
 		
 		Sample1_constructor_overloading2 scon2 = new Sample1_constructor_overloading2(x, (double)y);
@@ -66,6 +69,10 @@ public class Sample1_constructor_overloading2 {
 		
 		Sample1_constructor_overloading2 scon4 = new Sample1_constructor_overloading2((double)x, (double)y);
 		System.out.println("x/y: " + scon4.getResult());
+
+		Sample1_constructor_overloading2 scon5 = new Sample1_constructor_overloading2(x, y);
+		System.out.println("x/y: " + scon5.getResult());
+
 
 
 
