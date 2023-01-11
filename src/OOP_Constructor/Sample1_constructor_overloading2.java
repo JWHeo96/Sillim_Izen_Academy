@@ -49,13 +49,16 @@ public class Sample1_constructor_overloading2 {
 		
 //		//												 
 		Sample1_constructor_overloading2 scon1 = new Sample1_constructor_overloading2(x, y);
-		System.out.println(scon1.result);
+		System.out.println("x+y: " + scon1.result);
+		
 		Sample1_constructor_overloading2 scon2 = new Sample1_constructor_overloading2(x, (double)y);
-		System.out.println(scon2.result);
+		System.out.println("x-y: " + scon2.result);
+		
 		Sample1_constructor_overloading2 scon3 = new Sample1_constructor_overloading2((double)x, y);
-		System.out.println(scon3.result);
+		System.out.println("x*y: " + scon3.result);
+		
 		Sample1_constructor_overloading2 scon4 = new Sample1_constructor_overloading2((double)x, (double)y);
-		System.out.println(scon4.result);
+		System.out.println("x/y: " + scon4.result);
 
 
 
