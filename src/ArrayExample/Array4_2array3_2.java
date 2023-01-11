@@ -62,47 +62,35 @@ public class Array4_2array3_2 {
 		int i=0; int j=0; 
 		int tempScore[]; int tempInt=0; double tempDouble; String tempStr=null;
 		
-		while(sw) {
+		while(true) {
 			// 학생의 이름, 성적 입력
-			while(sw) {
-				try {
-					for(i=0; i<name.length; i++) {
-						//학생 이름 입력
-						System.out.println((i+1) + "번째 학생의 이름을 입력하세요.");
-						name[i] = sc.next();
-						// 학생의 과목별 점수 입력
-							for(j=0; j<sub; j++) {
-								System.out.println(name[i] + " 학생의 " + subject[j] + "점수를 입력하세요.");
-								score[i][j] = sc.nextInt();
-								// 입력받은 과목의 총 합계 점수 계산
-								sum[i] += score[i][j];
-							}
+			for(i=0; i<name.length; i++) {
+				//학생 이름 입력
+				System.out.println((i+1) + "번째 학생의 이름을 입력하세요.");
+				name[i] = sc.next();
+				// 학생의 과목별 점수 입력
+					for(j=0; j<sub; j++) {
+						System.out.println(name[i] + " 학생의 " + subject[j] + "점수를 입력하세요.");
+						score[i][j] = sc.nextInt();
+						// 입력받은 과목의 총 합계 점수 계산
+						sum[i] += score[i][j];
+					}
+					// 학생별 평균 점수 계산
+					avg[i] = (double)sum[i]/sub;
+					
+					// 학생별 평균점수에 따른 학점 계산
+					// 100점 초과시에는 grade에 잘못된 성적 입력
+					if(avg[i]>100.0) {grade[i] ="-";} 
+					else {
+						switch((int)avg[i]/10) {
+						    case 10: case 9: grade[i] = "A"; break;
+							case 8: grade[i] = "B"; break;
+							case 7: grade[i] = "C"; break;
+							case 6: grade[i] = "D"; break;
+							default: grade[i] = "F"; break; 
 						} 
-					sw = false;
-				} catch (InputMismatchException e) {
-					System.out.println("잘못된 값을 입력하셨습니다. 처음부터 다시 입력해주세요.");
-					sc.nextLine();
-				}
-				sw = true;
-			}
-
-				// 학생별 평균 점수 계산
-				avg[i] = (double)sum[i]/sub;
-				
-				// 학생별 평균점수에 따른 학점 계산
-				// 100점 초과시에는 grade에 잘못된 성적 입력
-				if(avg[i]>100.0) {grade[i] ="-";} 
-				else {
-					switch((int)avg[i]/10) {
-					    case 10: case 9: grade[i] = "A"; break;
-						case 8: grade[i] = "B"; break;
-						case 7: grade[i] = "C"; break;
-						case 6: grade[i] = "D"; break;
-						default: grade[i] = "F"; break; 
-					} 
-				}
-			
-		
+					}
+				} 
 			
 			// 석차 구하기
 			for(i=0; i<name.length; i++) {
