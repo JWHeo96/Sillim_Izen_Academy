@@ -15,18 +15,21 @@ import java.util.Scanner;
  * 10. 목적: 클래스에서 전달하여 클래스 변수의 값을 초기화 시키는 것을 말합니다. 
  * 11. this는 생략이 가능하다.
  */
-public class Sample1_constructor {
+public class Number2 {
 	
 	// 필드(Field)
 	static Scanner sc = new Scanner(System.in);
-	private static int x; //0 => 300
-	private static int y; //0 => 5
+	private int su; //0 => 300
 	
 	// 생성자(Constructor)
 	//							 300,  5
-	public Sample1_constructor(int x, int y) { //생성자 메소드
-		this.x = x;	// 300
-		this.y = y;	// 5
+	// Setter()
+	private Number2(int su) { //생성자 메소드
+		this.su = su;	// 300, 5
+	}
+	// Getter()
+	private int getNumber() {
+		return su;
 	}
 	
 	// 메소드(Method)
@@ -40,10 +43,7 @@ public class Sample1_constructor {
 		int y = sc.nextInt(); // 5
 		return y;
 	}
-	private static void adder() {
-		int sum = x + y;
-		System.out.println("ADD(): " + sum); // 305
-	}
+
 	
 	// Main Area
 	public static void main(String[] args) {
@@ -53,38 +53,14 @@ public class Sample1_constructor {
 		int y = dataInput2(); // y => 5
 		
 //		//												 300, 5
-//		Sample1_constructor scon = new Sample1_constructor(x, y);
-//		adder(); // 덧셈
+		Number2 scon1 = new Number2(x);
+		System.out.println(scon1.getNumber());
 		
-		// Number라는 클래스의 Number(int x, int y) 생성자에 x, y값 입력받아 전달
-		Number numb = new Number(x, y);
-		
-		// Number변수의 필드 변수 n, m 값을 출력
-		int n = Number.getNumber1();
-		int m = Number.getNumber2();
-		System.out.println(n);
-		System.out.println(m);
+		Number2 scon2 = new Number2(y);
+		System.out.println(scon2.getNumber());
+
 	}
 
 }
 
-class Number {
-	static int n=0; 
-	static int m=0; 
-	
-	// 메인 Class에서 입력받은 x, y값을 Number 클래스의 필드변수인 n과 m에 저장
-	public Number(int x, int y) {
-		Number.n = x;
-		Number.m = y;
-	}
-	
-	// Number변수의 필드 변수 n, m 값을 출력
-	public static int getNumber1() {
-		return n;
-	}
-	public static int getNumber2() {
-		return m;
-	}
 
-
-}
