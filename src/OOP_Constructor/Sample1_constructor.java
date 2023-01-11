@@ -78,8 +78,8 @@ class Number {
 	
 	// Number변수의 필드 변수 n, m 값을 출력
 	public static void getNumber() {
-		System.out.println("getNumber(): " + n);
-		System.out.println("getNumber(): " + m);
+		System.out.println("getNumber(x): " + n);
+		System.out.println("getNumber(y): " + m);
 	}
 
 
