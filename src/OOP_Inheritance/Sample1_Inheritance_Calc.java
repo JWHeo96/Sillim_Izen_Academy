@@ -2,7 +2,7 @@ package OOP_Inheritance;
 
 import java.util.Scanner;
 
-public class Sample1_Inheritance_Calc implements Calculator {
+public class Sample1_Inheritance_Calc implements Interface_Calculator {
 	
 	int result = 0;
 	
