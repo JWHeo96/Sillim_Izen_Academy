@@ -2,7 +2,7 @@ package OOP_Inheritance;
 
 import java.util.Scanner;
 
-public class Sample1_Inheritance_Calc implements Interface_Calculator {
+class Calculator implements Interface_Calculator {
 	
 	int result = 0;
 	
@@ -35,8 +35,11 @@ public class Sample1_Inheritance_Calc implements Interface_Calculator {
 		result = x % y;
 		return result;
 	}
+	
+}
 
-
+public class Sample1_Inheritance_Calc extends Calculator {
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -44,8 +47,8 @@ public class Sample1_Inheritance_Calc implements Interface_Calculator {
 		int x = sc.nextInt();
 		System.out.println("두 번째 수를 입력해주세요.");
 		int y = sc.nextInt();
-	
-		Sample1_Inheritance_Calc calc = new Sample1_Inheritance_Calc();
+		
+		Calculator calc = new Calculator();
 		System.out.println(x + " + " + y + " = "  + calc.sum(x, y));
 		System.out.println(x + " - " + y + " = "  + calc.dif(x, y));
 		System.out.println(x + " * " + y + " = "  + calc.multi(x, y));
