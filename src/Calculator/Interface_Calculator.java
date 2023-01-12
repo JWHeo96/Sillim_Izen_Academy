@@ -1,4 +1,4 @@
-package OOP_Inheritance;
+package Calculator;
 
 public interface Interface_Calculator {
 	

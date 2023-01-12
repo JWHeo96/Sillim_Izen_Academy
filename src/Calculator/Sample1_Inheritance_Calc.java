@@ -1,4 +1,4 @@
-package OOP_Inheritance;
+package Calculator;
 
 import java.util.Scanner;
 

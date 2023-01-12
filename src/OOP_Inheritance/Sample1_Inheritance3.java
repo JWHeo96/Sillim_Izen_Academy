@@ -53,13 +53,15 @@ public class Sample1_Inheritance3 implements Age3 { // child class
 		 * main class: Sample1_Inheritance3
 		 * sub class
 		 *  1. interface: 가감승제산 5가지
-		 *  - 덧셈 인터페이스: 
-		 *  - 뺄셈 인터페이스: 
-		 *  - 곱셈 인터페이스:
-		 *  - 나눗셈(몫) 인터페이스:
-		 *  - 나눗셈(나머지) 인터페이스:
+		 *  - 덧셈 인터페이스: addInterface, public abstract void adder(int x, int y);
+		 *  - 뺄셈 인터페이스: suberInterface, suber(int x, int y)
+		 *  - 곱셈 인터페이스: mulerInterface, muler(int x, int y)
+		 *  - 나눗셈(몫) 인터페이스: divierInterface1, divider1(int x, int y)
+		 *  - 나눗셈(나머지) 인터페이스: divierInterfcae2, divider2(int x, int y)
 		 *  
- 		 *  2. sub class: 
+ 		 *  2. sub class: Inheritance3
+ 		 *  3. logic 작성
+ 		 *  
 		 */
 		Scanner sc = new Scanner(System.in);
 		System.out.println("이름을 입력하세요.");

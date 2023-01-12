@@ -1,4 +1,4 @@
-package OOP_Inheritance;
+package Calculator;
 
 class Calculator implements Interface_Calculator {
 	
