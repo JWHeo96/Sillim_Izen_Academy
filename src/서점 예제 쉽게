@@ -1,0 +1,105 @@
+package homeworks;
+
+import java.util.Scanner;
+
+/* Constructor(생성자)
+ * 1. 책의 금액
+ * 2. 지불 금액
+ */
+class Money {
+	// Money(int book, int pay)를 통해 입력받을 값을 저장할 변수 선언
+	int book;
+	int pay;
+	
+	// 생성자명은 클래스명과 같아야 함
+	Money(int book, int pay){
+		// SubClass에서 전달받은 값을 생성자의 클래스변수에 전달
+		this.book = book;
+		this.pay = pay;
+	}
+}
+
+/* Interface
+ * 1. 책과 지불 금액을 입력 받아 값을 할인(학부모: 3000원)
+ * 2. 책과 지불 금액을 입력 받아 값을 할인(학생: 4000원)
+ * 3. 위 1, 2번 두가지 경우의 결과를 계산하여, 최종적으로 소비자가 받을 금액을 계산, 출력  
+ */
+interface Process{
+	// 1. 책과 지불 금액을 입력 받아 값을 할인(학부모: 3000원)
+	public abstract void discountAdult();
+	// 2. 책과 지불 금액을 입력 받아 값을 할인(학생: 4000원) 
+	public abstract void discountStudent();
+	// 3. 위 1, 2번 두가지 경우의 결과를 계산하여, 최종적으로 소비자가 받을 금액을 계산, 출력  
+	public abstract void result();
+}
+
+/* Sub Class
+ * 1. Interface의 작업을 상속받아, 메소드 설계
+ * - 책과 지불 금액을 입력 받아 값을 할인(학부모: 3000원)
+ * - 책과 지불 금액의 금액을 입력 받아 값을 할인(학생: 4000원)
+ * - 위 1, 2번 두가지 경우의 결과를 계산하여, 최종적으로 소비자가 받을 금액을 계산, 출력  
+ * 2. Constuctor 클래스를 상속받아, Constructor 생성자로 값 전달
+ */
+class Cashier extends Money implements Process {
+	// 학부모 할인 or 학생 할인의 결과값 저장
+	int result = 0;
+
+	/* Main 클래스에서 cashier(x, y)로 전달받은 값을 상속받은
+	 * 생성자인 Money로 전달
+	 */
+	Cashier(int book, int pay) {
+		super(book, pay);
+	}
+
+	// 학부모 할인 계산 값을 생성자의 result에 전달 
+	@Override
+	public void discountAdult() {
+		result = super.pay - (super.book - 3000); 
+	}
+
+	// 학생 할인 계산 값을 생성자의 result에 전달
+	@Override
+	public void discountStudent() {
+		result = super.pay - (super.book - 4000); 
+	}
+
+	// 계산 결과 출력
+	@Override
+	public void result() {
+		System.out.println("\n지불 금액: " + super.pay);
+		System.out.println("책의 금액: " + super.book);
+		System.out.println("돌려받을 최종 금액: " + result);
+	}
+	
+}
+
+/* Main 클래스
+ * 1. SubClass의 객체를 생성
+ * 2. 스캐너를 이용해 x:책과 y:지불 금액 입력
+ * 3. 입력받은 x:책, y:지불 금액의 값을 미리 생성했던 SubClass의 메소드로 전달
+ */
+public class Library {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// Sub클래스로 넘겨줄 책과 지불 금액 입력
+		System.out.print("책의 가격: ");
+		int book = sc.nextInt();
+		System.out.print("\n지불 금액: ");
+		int pay = sc.nextInt();
+		
+		// Cashier 클래스에 cash 객체 생성과 동시에 book과 pay의 값 전달
+		Cashier cash = new Cashier(book, pay);
+		
+		// 학부모와 학생을 구분하여 switch~case문 설계
+		System.out.println("\n학부모:1\t학생:2\n번호를 선택해주세요.");
+		int choice = sc.nextInt();
+		switch(choice) {
+			case 1: cash.discountAdult(); break;
+			case 2: cash.discountStudent(); break;
+		}
+		// 결과문 출력
+		cash.result();
+		
+	}
+}
