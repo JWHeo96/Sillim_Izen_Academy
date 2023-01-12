@@ -1,6 +1,6 @@
 package Company;
 
-public class Calculator extends employee implements Interface_Calculator  {
+public class Overr_Calculator extends Constructor_employee implements Interface_Calculator  {
 	int result = 0;
 	
 	@Override

@@ -1,6 +1,6 @@
 package Company;
 
-public class employee {
+public class Constructor_employee {
 	static String name;
 	static String dept;
 	static int salary;

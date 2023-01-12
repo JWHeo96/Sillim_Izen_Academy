@@ -2,7 +2,7 @@ package Company;
 
 import java.util.Scanner;
 
-public class TransferData extends employee implements inputInfo{
+public class Overr_inputInfo extends Constructor_employee implements Interface_inputInfo{
 	Scanner sc = new Scanner(System.in);
 
 	@Override
