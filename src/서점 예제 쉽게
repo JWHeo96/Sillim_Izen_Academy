@@ -51,13 +51,13 @@ class Cashier extends Money implements Process {
 		super(book, pay);
 	}
 
-	// 학부모 할인 계산 값을 생성자의 result에 전달 
+	// 학부모 할인 계산 값을 클래스 변수 result에 전달 
 	@Override
 	public void discountAdult() {
 		result = super.pay - (super.book - 3000); 
 	}
 
-	// 학생 할인 계산 값을 생성자의 result에 전달
+	// 학생 할인 계산 값을 클래스 변수 result에 전달
 	@Override
 	public void discountStudent() {
 		result = super.pay - (super.book - 4000); 
