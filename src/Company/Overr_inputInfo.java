@@ -34,7 +34,7 @@ public class Overr_inputInfo extends Constructor_employee implements Interface_i
 	}
 	
 	public void inputInfo() {
-		this.employee(inputName(), inputDept(), inputSalary(), inputCommition());
+		this.Constructor_employee(inputName(), inputDept(), inputSalary(), inputCommition());
 	}
 
 }
