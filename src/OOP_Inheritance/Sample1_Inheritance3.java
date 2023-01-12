@@ -28,31 +28,18 @@ import java.util.Scanner;
  *  그래서, 반드시 클래스에게 상속하여 메소드 오버라이딩을 하여 처리해야 합니다.
  */
 
-interface Age3 { // parent interface
-	
-	public abstract int age(); // 추상 메소드 선언 부분. 
-	
-}
 
-public class Sample1_Inheritance3 implements Age3 { // child class
-	
-	@Override // 추상메소드 오버라이딩 구현
-	public int age() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("나이를 입력하세요.");
-		int age = sc.nextInt();
-		
-		return age;
-	}
-		
+public class Sample1_Inheritance3 { // child class
 
 	public static void main(String[] args) {
 		// 문제 > 데이터를 입력받아서 가강승제산을 처리하되 상속을 이용하여 처리하고 출력해보세요.
 		/* 애플리케이션 설계
 		 * --------------------------------
 		 * main class: Sample1_Inheritance3
+		 * 
 		 * sub class
 		 *  1. interface: 가감승제산 5가지
+		 *  - 데이터 입력: inputInterface(x, y), input()
 		 *  - 덧셈 인터페이스: addInterface, public abstract void adder(int x, int y);
 		 *  - 뺄셈 인터페이스: suberInterface, suber(int x, int y)
 		 *  - 곱셈 인터페이스: mulerInterface, muler(int x, int y)
@@ -60,19 +47,36 @@ public class Sample1_Inheritance3 implements Age3 { // child class
 		 *  - 나눗셈(나머지) 인터페이스: divierInterfcae2, divider2(int x, int y)
 		 *  
  		 *  2. sub class: Inheritance3
- 		 *  3. logic 작성
+ 		 *  - InheritanceAdder
+ 		 *  - InheritanceSuber
+ 		 *  - InheritanceMuler
+ 		 *  - InheritanceDivier
+ 		 *  - InheritanceDivier
+ 		 *  
+ 		 *  3. 인터페이스가 인터페이스에게 상속
+ 		 *  
+ 		 *  4. logic 작성
  		 *  
 		 */
-		Scanner sc = new Scanner(System.in);
-		System.out.println("이름을 입력하세요.");
-		String name = sc.next();
-
-		Sample1_Inheritance3 si2 = new Sample1_Inheritance3();
-		int age = si2.age();
+		InheritanceInput it3 = new InheritanceInput();
+		int x = it3.input();
+		int y = it3.input();
 		
-		System.out.println(name + "님의 나이는 " + age + "입니다.");
-//		int age = age();
-//		System.out.println(name + "님의 나이는 " + age + "입니다."); // 이름 출력
+		InheritanceAdder itadd= new InheritanceAdder();
+		itadd.adder(x, y);
+		
+		InheritanceSuber itsub= new InheritanceSuber();
+		itsub.suber(x, y);
+		
+		InheritanceMuler itmul= new InheritanceMuler();
+		itmul.muler(x, y);
+		
+		InheritanceDivier1 itdiv1= new InheritanceDivier1();
+		itdiv1.divier1(x, y);
+		
+		InheritanceDivier2 itdiv2= new InheritanceDivier2();
+		itdiv2.divier2(x, y);
+	
 	
 	}
 

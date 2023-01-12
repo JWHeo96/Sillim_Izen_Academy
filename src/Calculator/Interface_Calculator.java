@@ -1,6 +1,6 @@
 package Calculator;
 
-public interface Interface_Calculator {
+interface Interface_Calculator {
 	
 	public abstract int add(int x, int y);
 	public abstract int sub(int x, int y);
