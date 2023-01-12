@@ -14,6 +14,5 @@ public class Main {
 		CalcCash cc = new CalcCash(person, money);
 		cc.printMoney();
 		
-		
 	}
 }
