@@ -5,19 +5,19 @@ class Calculator implements Interface_Calculator {
 	int result = 0;
 	
 	@Override
-	public int sum(int x, int y) {
+	public int add(int x, int y) {
 		result = x + y;
 		return result;
 	}
 
 	@Override
-	public int dif(int x, int y) {
+	public int sub(int x, int y) {
 		result = x - y;
 		return result;
 	}
 
 	@Override
-	public int multi(int x, int y) {
+	public int mul(int x, int y) {
 		result = x * y;
 		return result;
 	}
@@ -29,7 +29,7 @@ class Calculator implements Interface_Calculator {
 	}
 
 	@Override
-	public int remain(int x, int y) {
+	public int rem(int x, int y) {
 		result = x % y;
 		return result;
 	}

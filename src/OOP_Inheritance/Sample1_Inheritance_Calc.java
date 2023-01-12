@@ -13,11 +13,11 @@ public class Sample1_Inheritance_Calc extends Calculator {
 		int y = sc.nextInt();
 		
 		Calculator calc = new Calculator();
-		System.out.println(x + " + " + y + " = "  + calc.sum(x, y));
-		System.out.println(x + " - " + y + " = "  + calc.dif(x, y));
-		System.out.println(x + " * " + y + " = "  + calc.multi(x, y));
+		System.out.println(x + " + " + y + " = "  + calc.add(x, y));
+		System.out.println(x + " - " + y + " = "  + calc.sub(x, y));
+		System.out.println(x + " * " + y + " = "  + calc.mul(x, y));
 		System.out.println(x + " / " + y + " = "  + calc.div(x, y));
-		System.out.println(x + " % " + y + " = "  + calc.remain(x, y));
+		System.out.println(x + " % " + y + " = "  + calc.rem(x, y));
 		
 	}
 
