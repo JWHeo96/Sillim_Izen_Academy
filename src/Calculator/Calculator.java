@@ -2,36 +2,31 @@ package Calculator;
 
 class Calculator implements Interface_Calculator {
 	
-	int result = 0;
+	static int result = 0;	
 	
 	@Override
-	public int add(int x, int y) {
-		result = x + y;
-		return result;
+	public void add(int x, int y) {
+		this.result = x + y;
 	}
 
 	@Override
-	public int sub(int x, int y) {
-		result = x - y;
-		return result;
+	public void sub(int x, int y) {
+		this.result = x - y;
 	}
 
 	@Override
-	public int mul(int x, int y) {
-		result = x * y;
-		return result;
+	public void mul(int x, int y) {
+		this.result = x * y;
 	}
 
 	@Override
-	public int div(int x, int y) {
-		result = x / y;
-		return result;
+	public void div(int x, int y) {
+		this.result = x / y;
 	}
 
 	@Override
-	public int rem(int x, int y) {
-		result = x % y;
-		return result;
+	public void rem(int x, int y) {
+		this.result = x % y;
 	}
 	
 }

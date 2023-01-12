@@ -12,12 +12,18 @@ public class Sample1_Inheritance_Calc extends Calculator {
 		System.out.println("두 번째 수를 입력해주세요.");
 		int y = sc.nextInt();
 		
+
 		Calculator calc = new Calculator();
-		System.out.println(x + " + " + y + " = "  + calc.add(x, y));
-		System.out.println(x + " - " + y + " = "  + calc.sub(x, y));
-		System.out.println(x + " * " + y + " = "  + calc.mul(x, y));
-		System.out.println(x + " / " + y + " = "  + calc.div(x, y));
-		System.out.println(x + " % " + y + " = "  + calc.rem(x, y));
+		calc.add(x, y);
+		System.out.println(x + " + " + y + " = "  + result);
+		calc.sub(x, y);
+		System.out.println(x + " - " + y + " = "  + result);
+		calc.mul(x, y);
+		System.out.println(x + " * " + y + " = "  + result);
+		calc.div(x, y);
+		System.out.println(x + " / " + y + " = "  + result);
+		calc.rem(x, y);
+		System.out.println(x + " % " + y + " = "  + result);
 		
 	}
 
