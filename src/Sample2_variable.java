@@ -47,6 +47,7 @@ public class Sample2_variable {
 			
 			Calculator sv = new Calculator();
 			sv.dataInput(x,y);
+			
 	
 
 			System.out.println("데이터를 다시 입력하시겠습니까?");

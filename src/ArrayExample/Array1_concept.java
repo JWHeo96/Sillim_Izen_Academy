@@ -1,5 +1,6 @@
 package ArrayExample;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Array1_concept {
@@ -25,8 +26,11 @@ public class Array1_concept {
 		double sum = 0;
 		int j = 0;
 		boolean sw = true;
+		Scanner sc = new Scanner(System.in);
+		
 		while(sw) {
-			Scanner sc = new Scanner(System.in);
+			try {
+
 			System.out.println("입력할 데이터의 갯수를 지정해주세요.");
 			int n = sc.nextInt();
 			
@@ -63,6 +67,11 @@ public class Array1_concept {
 				}
 			}
 		} // while loop end
+			catch (InputMismatchException e) {
+				System.out.println("잘못 된 입력입니다. 다시 입력해주세요.");
+				sc.nextLine();
+			}
+		}
 
 	} // main end
 

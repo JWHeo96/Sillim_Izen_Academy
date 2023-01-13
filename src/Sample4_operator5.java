@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Sample4_operator5 {
 	
 	public static void main(String[] args) {

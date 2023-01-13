@@ -1,5 +1,6 @@
 package Condition;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import javax.sound.midi.SysexMessage;
@@ -13,32 +14,32 @@ public class ifSample5_sungjuk3 {
 
 		int cnt=0;
 		while(cnt < 5) {	
-			cnt++;
-			System.out.println("성적을 입력하세요.");
-			double kor = sc.nextDouble();
-			String grade = 
-				(kor<=100.0 && kor>=90.0) ? "A":
-				(kor<90.0 && kor>=80.0) ? "B": 
-				(kor<80.0 && kor>=70.0) ? "C": 
-				(kor<70.0 && kor>=60.0) ? "D": 
-				(kor<60.0 && kor>=0.0) ? "F": "잘못된 데이터 입력입니다.";
-			System.out.println(grade + "\n");
+				cnt++;
+				System.out.println("성적을 입력하세요.");
+				double kor = sc.nextDouble();
+				String grade = 
+					(kor<=100.0 && kor>=90.0) ? "A":
+					(kor<90.0 && kor>=80.0) ? "B": 
+					(kor<80.0 && kor>=70.0) ? "C": 
+					(kor<70.0 && kor>=60.0) ? "D": 
+					(kor<60.0 && kor>=0.0) ? "F": "잘못된 데이터 입력입니다.";
+				System.out.println(grade + "\n");
 		}
-		
-		String grade[] = new String[5];
-		for(int i=0; i<5; i++) {
-			System.out.println((i+1) + "번째 학생의 성적을 입력하세요.");
-			int kor = sc.nextInt();
-			grade[i] = 
-				(kor<=100 && kor>=90) ? "A":
-				(kor<90 && kor>=80) ? "B": 
-				(kor<80 && kor>=70) ? "C": 
-				(kor<70 && kor>=60) ? "D": 
-				(kor<60 && kor>=0) ? "F": "잘못된 데이터 입력입니다.";
-		}
-		for(int i=0; i<grade.length;i++) {
-			System.out.println(i+1 + "번 째 학생의 학점 : " + grade[i] + "");
-		}
+				
+				String grade[] = new String[5];
+				for(int i=0; i<5; i++) {
+					System.out.println((i+1) + "번째 학생의 성적을 입력하세요.");
+					int kor = sc.nextInt();
+					grade[i] = 
+						(kor<=100 && kor>=90) ? "A":
+						(kor<90 && kor>=80) ? "B": 
+						(kor<80 && kor>=70) ? "C": 
+						(kor<70 && kor>=60) ? "D": 
+						(kor<60 && kor>=0) ? "F": "잘못된 데이터 입력입니다.";
+				}
+				for(int i=0; i<grade.length;i++) {
+					System.out.println(i+1 + "번 째 학생의 학점 : " + grade[i] + "");
+				}
 	
 //		while(sc.hasNextInt()) {
 //			int kor = sc.nextInt();
