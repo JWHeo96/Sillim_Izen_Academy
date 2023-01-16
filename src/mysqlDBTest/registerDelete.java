@@ -1,4 +1,4 @@
-package oracleDBTest2;
+package mysqlDBTest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,8 +18,8 @@ public class registerDelete {
 	public static void main(String[] args) {
 		
 		// 1. 드라이버 로딩 및 연결정보 설정
-		String driver = "oracle.jdbc.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521:xe"; // fullVersion => orcl
+		String driver = "com.mysql.cj.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/heoDB"; // fullVersion => orcl
 		String userid = "heo";
 		String userpwd = "1234";
 		
