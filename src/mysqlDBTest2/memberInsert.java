@@ -31,7 +31,7 @@ public class memberInsert {
 				conn = DriverManager.getConnection(url, userid, userpwd);
 				System.out.println("Connection is Successed!!!");
 			} catch (SQLException e) {
-				e.printStackTrace();
+				e.printStackTrace(); 
 				System.out.println("url, userid, userpwd가 잘못되었습니다.");
 			}
 		} catch (ClassNotFoundException e) {

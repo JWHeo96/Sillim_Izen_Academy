@@ -38,7 +38,7 @@ public class memberSelect {
 		}
 		
 		// 2. 조회 프로그램 작성
-		String sql = "select * from member order by id desc";
+		String sql = "select * from member order by name desc";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
