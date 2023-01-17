@@ -1,43 +1,18 @@
-package mysqlDBTest;
+package mysqlDBTest.Classes;
+import mysqlDBTest.*;
+import mysqlDBTest.Interfaces.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class registerSelect { 
+public class registerSelectTest extends registerDBConnectTest implements registerInter_Select {
+	public static PreparedStatement pstmt;
+	public static ResultSet rs;
 
-	private static Connection conn;
-	private static PreparedStatement pstmt;
-	private static ResultSet rs;
-
-//학생 관리 조회 시스템 개발
-
-	public static void main(String[] args) {
-		
-		// 1. 드라이버 로딩 및 연결정보 설정
-		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/heoDB"; // fullVersion => orcl
-		String userid = "heo";
-		String userpwd = "1234";
-		
-		try {
-			Class.forName(driver);
-			System.out.println("Oracle Driver Loading Successed!!!");
-			
-			try {
-				conn = DriverManager.getConnection(url, userid, userpwd);
-				System.out.println("Connection is Successed!!!");
-			} catch (SQLException e) {
-				e.printStackTrace();
-				System.out.println("url, userid, userpwd가 잘못되었습니다.");
-			}
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		// 2. 조회 프로그램 작성
+	@Override
+	public void registerSelect() {
+		registerDBConnect();
 		String sql = "select * from register order by hakbun asc";
 		
 		try {
@@ -68,4 +43,5 @@ public class registerSelect {
 			e.printStackTrace();
 		}
 	}
+
 }

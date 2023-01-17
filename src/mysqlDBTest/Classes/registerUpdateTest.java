@@ -1,45 +1,21 @@
-package mysqlDBTest;
+package mysqlDBTest.Classes;
+import mysqlDBTest.*;
+import mysqlDBTest.Interfaces.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import static oracleDBTest3.memberDBConnectTest.conn;
+
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class registerUpdate { 
+public class registerUpdateTest extends registerDBConnectTest implements registerInter_Update {
 
-	private static Connection conn;
-	private static PreparedStatement pstmt;
-	private static ResultSet rs;
+	private PreparedStatement pstmt;
 
-//회원 정보 수정 시스템 개발
-
-	public static void main(String[] args) {
-		
-		// 1. 드라이버 로딩 및 연결정보 설정
-		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/heoDB"; // fullVersion => orclrsion => orcl
-		String userid = "heo";
-		String userpwd = "1234";
-		
-		try {
-			Class.forName(driver);
-			System.out.println("Oracle Driver Loading Successed!!!");
-			
-			try {
-				conn = DriverManager.getConnection(url, userid, userpwd);
-				System.out.println("Connection is Successed!!!");
-			} catch (SQLException e) {
-				e.printStackTrace();
-				System.out.println("url, userid, userpwd가 잘못되었습니다.");
-			}
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
+	@Override
+	public void registerUpdate() {
 		// 2. 수정 프로그램 작성
-		
+		registerDBConnect();
 		try {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("수정 할 학번을 입력해주세요.");
@@ -70,6 +46,6 @@ public class registerUpdate {
 			e.printStackTrace();
 			System.out.println("수정 데이터가 문제이거나 SQL 문장이 잘못되었습니다.!!!");
 		}
-
 	}
+
 }

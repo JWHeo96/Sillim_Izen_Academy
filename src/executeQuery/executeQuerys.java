@@ -1,5 +1,6 @@
 package executeQuery;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import CrudMatrix.CrudMatrix;
@@ -9,11 +10,13 @@ public class executeQuerys {
 		
 		String driver = null;
 		String url = null;
+		String sql = null;
 		boolean sw = true;
 		
 		Scanner sc = new Scanner(System.in);
+
 		System.out.println("연결하고자 하는 SQL을 입력해주세요\n(oracle/mysql)");
-		String sql = sc.next();
+		sql = sc.next();
 		if(sql.equals("mysql")) {
 			driver = "com.mysql.cj.jdbc.Driver";
 			url = "jdbc:mysql://localhost:3306/heoDB2";
@@ -21,7 +24,7 @@ public class executeQuerys {
 			driver = "oracle.jdbc.OracleDriver";
 			url = "jdbc:oracle:thin:@localhost:1521:xe";
 		}
-		
+
 		CrudMatrix crud = new CrudMatrix();
 		crud.insertInfo(driver, url);
 		
