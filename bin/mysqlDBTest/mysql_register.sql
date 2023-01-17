@@ -1,0 +1,5 @@
+
+select * from register;
+
+
+commit;
