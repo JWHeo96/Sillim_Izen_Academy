@@ -35,6 +35,7 @@ public class executeQuerys {
 				case 4: crud.DeleteTable(); break;
 				case 5: sw = false; break;
 			}
+			System.out.println();
 		}
 		
 	}
