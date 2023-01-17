@@ -25,8 +25,6 @@ public class CrudMatrix implements CreateTable, ReadTable, DeleteTable, UpdateTa
 	@Override
 	public void UpdateTable() {
 		// 1. 드라이버 로딩 및 연결정보 설정
-		String driver = "oracle.jdbc.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521:xe"; // fullVersion => orcl
 		String userid = "heo";
 		String userpwd = "1234";
 		
@@ -82,8 +80,6 @@ public class CrudMatrix implements CreateTable, ReadTable, DeleteTable, UpdateTa
 	@Override
 	public void DeleteTable() {
 		// 1. 드라이버 로딩 및 연결정보 설정
-		String driver = "oracle.jdbc.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521:xe"; // fullVersion => orcl
 		String userid = "heo";
 		String userpwd = "1234";
 		
@@ -184,8 +180,6 @@ public class CrudMatrix implements CreateTable, ReadTable, DeleteTable, UpdateTa
 	public void CreateTable() {
 
 		// 1. 드라이버 로딩 및 연결정보 설정
-		String driver = "oracle.jdbc.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521:xe"; // fullVersion => orcl
 		String userid = "heo";
 		String userpwd = "1234";
 		
