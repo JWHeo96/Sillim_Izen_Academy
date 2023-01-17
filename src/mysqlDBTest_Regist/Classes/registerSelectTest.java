@@ -1,6 +1,6 @@
-package mysqlDBTest.Classes;
-import mysqlDBTest.*;
-import mysqlDBTest.Interfaces.*;
+package mysqlDBTest_Regist.Classes;
+import mysqlDBTest_Regist.*;
+import mysqlDBTest_Regist.Interfaces.*;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

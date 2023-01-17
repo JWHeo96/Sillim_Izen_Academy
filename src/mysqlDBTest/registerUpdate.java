@@ -1,4 +1,4 @@
-package mysqlDBTest_Backup;
+package mysqlDBTest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

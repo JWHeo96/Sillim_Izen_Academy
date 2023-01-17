@@ -1,19 +1,15 @@
-package mysqlDBTest;
-import mysqlDBTest.Classes.*;
-import mysqlDBTest.Interfaces.*;
+package mysqlDBTest_Regist;
 import java.util.Scanner;
 
-import oracleDBTest3.memberDBConnectTest;
-import oracleDBTest3.memberDeleteTest;
-import oracleDBTest3.memberInsertTest;
-import oracleDBTest3.memberInter_classMethod;
-import oracleDBTest3.memberSelectTest;
-import oracleDBTest3.memberUpdateTest;
+import mysqlDBTest_Regist.Classes.registerDBConnectTest;
+import mysqlDBTest_Regist.Classes.registerDeleteTest;
+import mysqlDBTest_Regist.Classes.registerInsertTest;
+import mysqlDBTest_Regist.Classes.registerSelectTest;
+import mysqlDBTest_Regist.Classes.registerUpdateTest;
 
 public class mysqlDBTest_Main {
 
 	public static void main(String[] args) {
-		memberInter_classMethod micm = new memberInter_classMethod();
 		boolean stop = true;
 		
 		while(stop) {
