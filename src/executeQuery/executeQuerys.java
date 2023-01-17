@@ -28,6 +28,7 @@ public class executeQuerys {
 		while(sw) {
 			System.out.println("원하는 작업을 선택해주세요.\n1:생성\t2:조회\t3:수정\t4:삭제\t5:종료");
 			int numb = sc.nextInt();
+			System.out.println("\n");
 			switch(numb) {
 				case 1: crud.CreateTable(); break;
 				case 2: crud.ReadTable(); break;
@@ -35,7 +36,7 @@ public class executeQuerys {
 				case 4: crud.DeleteTable(); break;
 				case 5: sw = false; break;
 			}
-			System.out.println();
+			System.out.println("\n");
 		}
 		
 	}
