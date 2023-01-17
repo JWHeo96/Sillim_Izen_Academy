@@ -20,10 +20,10 @@ public class executeQuerys {
 			driver = "oracle.jdbc.OracleDriver";
 			url = "jdbc:oracle:thin:@localhost:1521:xe";
 		}
+		
 		CrudMatrix crud = new CrudMatrix();
 		crud.insertInfo(driver, url);
-		
-		System.out.println("작업을 골라주세요.\n1:생성\t2:조회\t3:수정\t4:삭제");
+		System.out.println("원하는 작업을 선택해주세요.\n1:생성\t2:조회\t3:수정\t4:삭제");
 		int numb = sc.nextInt();
 		switch(numb) {
 			case 1: crud.CreateTable(); break;
