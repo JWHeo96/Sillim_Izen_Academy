@@ -26,7 +26,7 @@ public class executeQuerys {
 		crud.insertInfo(driver, url);
 		
 		while(sw) {
-			System.out.println("원하는 작업을 선택해주세요.\n1:생성\t2:조회\t3:수정\t4:삭제\5:종료");
+			System.out.println("원하는 작업을 선택해주세요.\n1:생성\t2:조회\t3:수정\t4:삭제\t5:종료");
 			int numb = sc.nextInt();
 			switch(numb) {
 				case 1: crud.CreateTable(); break;
