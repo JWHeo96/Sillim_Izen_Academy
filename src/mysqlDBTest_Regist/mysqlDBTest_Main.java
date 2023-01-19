@@ -1,11 +1,7 @@
 package mysqlDBTest_Regist;
 import java.util.Scanner;
 
-import mysqlDBTest_Regist.Classes.registerDBConnectTest;
-import mysqlDBTest_Regist.Classes.registerDeleteTest;
-import mysqlDBTest_Regist.Classes.registerInsertTest;
-import mysqlDBTest_Regist.Classes.registerSelectTest;
-import mysqlDBTest_Regist.Classes.registerUpdateTest;
+import mysqlDBTest_Regist.Classes.*;
 
 public class mysqlDBTest_Main {
 
